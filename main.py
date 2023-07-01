@@ -18,3 +18,4 @@ ad_list = []
 for ad in car_ads:
     ad_title = ad.select_one('.kt-post-card__title').text
     ad_operation = ad.select_one('.kt-post-card__description').text
+    ad_location = ad.select_one('.kt-post-card__bottom').text
