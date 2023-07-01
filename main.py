@@ -16,3 +16,4 @@ car_ads = soup.select('.kt-post-card')
 ad_list = []
 
 for ad in car_ads:
+    ad_title = ad.select_one('.kt-post-card__title').text
