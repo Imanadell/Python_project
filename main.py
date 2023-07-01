@@ -24,3 +24,4 @@ for ad in car_ads:
         'price': ad_operation,
         'location': ad_location
     }
+    ad_list.append(ad_info)
