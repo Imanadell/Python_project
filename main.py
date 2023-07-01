@@ -6,4 +6,8 @@ from bs4 import BeautifulSoup
 driver_path = r"D:\app\chromedriver\chromedriver.exe"
 service = Service(executable_path=driver_path)
 driver = webdriver.Chrome(service=service)
+
 driver.get("https://divar.ir/s/mashhad/car")
+
+driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+time.sleep(5)
