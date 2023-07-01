@@ -14,3 +14,5 @@ time.sleep(10)
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 car_ads = soup.select('.kt-post-card')
 ad_list = []
+
+for ad in car_ads:
