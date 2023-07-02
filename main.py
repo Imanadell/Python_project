@@ -11,6 +11,7 @@ driver.get("https://divar.ir/s/mashhad/car")
 
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 time.sleep(10)
+
 soup = BeautifulSoup(driver.page_source, 'html.parser')
 car_ads = soup.select('.kt-post-card')
 ad_list = []
@@ -25,3 +26,8 @@ for ad in car_ads:
         'location': ad_location
     }
     ad_list.append(ad_info)
+
+driver.quit()
+
+for ad in ad_list:
+    print(ad['title'],'  ', ad['price'],'  ', ad['location'])
